@@ -5,18 +5,11 @@ using SAPWS.Models;
 
 namespace SAPWS.Context
 {
-    public class IncidentContext
+    public class IncidentContext : SAPContext
     {
         public string ConnectionString { get; set; }
-
-        public IncidentContext(string connectionString)
+        public IncidentContext(string connectionString) : base(connectionString)
         {
-            this.ConnectionString = connectionString;
-        }
-
-        public MySqlConnection GetConnection()
-        {
-            return new MySqlConnection(ConnectionString);
         }
 
         public List<Incident> GetAllIncidents()

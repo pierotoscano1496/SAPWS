@@ -30,7 +30,7 @@ namespace SAPWS
         {
             // Add framework services.
             services.AddMvc();
-            services.Add(new ServiceDescriptor(typeof(IncidentContext), new IncidentContext(Configuration.GetConnectionString("DefaultConnection"))));
+            services.Add(new ServiceDescriptor(typeof(SAPContext), new SAPContext(Configuration.GetConnectionString("DefaultConnection"))));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
