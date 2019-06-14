@@ -3,18 +3,18 @@ using MySql.Data.MySqlClient;
 
 namespace SAPWS.Context
 {
-    public class SAPContext
+    public class BaseConnection
     {
-        public string ConnectionString { get; set; }
+        protected string ConnectionString { get; set; }
 
-        public SAPContext(string connectionString)
+        public BaseConnection(string connectionString)
         {
             this.ConnectionString = connectionString;
         }
 
         public MySqlConnection GetConnection()
         {
-            return new MySqlConnection(ConnectionString);
+            return new MySqlConnection(this.ConnectionString);
         }
     }
 }

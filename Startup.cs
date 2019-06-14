@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using SAPWS.Context;
 
 namespace SAPWS
 {
@@ -30,7 +29,7 @@ namespace SAPWS
         {
             // Add framework services.
             services.AddMvc();
-            services.Add(new ServiceDescriptor(typeof(SAPContext), new SAPContext(Configuration.GetConnectionString("DefaultConnection"))));
+            services.AddSingleton<IConfigurationRoot>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

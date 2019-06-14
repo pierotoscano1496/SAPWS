@@ -1,7 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\arcgis\\.nuget\\packages"
+      "C:\\Users\\Piero\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Piero\\.nuget\\packages"
     ]
   }
 }

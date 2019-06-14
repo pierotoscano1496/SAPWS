@@ -5,9 +5,8 @@ using SAPWS.Models;
 
 namespace SAPWS.Context
 {
-    public class IncidentContext : SAPContext
+    public class IncidentContext : BaseConnection
     {
-        public string ConnectionString { get; set; }
         public IncidentContext(string connectionString) : base(connectionString)
         {
         }
