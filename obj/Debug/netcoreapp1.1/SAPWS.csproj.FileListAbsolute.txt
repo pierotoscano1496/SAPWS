@@ -6,6 +6,3 @@ D:\projects\SAPWS\bin\Debug\netcoreapp1.1\SAPWS.pdb
 D:\projects\SAPWS\obj\Debug\netcoreapp1.1\SAPWS.AssemblyInfo.cs
 D:\projects\SAPWS\obj\Debug\netcoreapp1.1\SAPWS.dll
 D:\projects\SAPWS\obj\Debug\netcoreapp1.1\SAPWS.pdb
-D:\projects\SAPWS\obj\Debug\netcoreapp1.1\SAPWS.csprojAssemblyReference.cache
-D:\projects\SAPWS\obj\Debug\netcoreapp1.1\SAPWS.csproj.CoreCompileInputs.cache
-D:\projects\SAPWS\obj\Debug\netcoreapp1.1\SAPWS.AssemblyInfoInputs.cache

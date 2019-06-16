@@ -26,22 +26,27 @@ namespace SAPWS.Context
 
                     if (reader.HasRows)
                     {
+                        listProducts = new List<Product>();
+                        
                         while (reader.Read())
                         {
-                            /*
-                             Customer customer = new Customer
+                            Product product = new Product
                             {
-                                CustomerId = reader.GetInt32("customer_id"),
-                                Name = reader.GetString("name"),
-                                CompanyEmail = reader.GetString("company_email"),
-                                Address = reader.GetString("address"),
-                                Phone = reader.GetString("phone"),
-                                Password = reader.GetString("password")
+                                ProductId = reader.GetInt32("product_id"),
+                                SapProduct = reader.GetString("sap_product"),
+                                SapVersion = reader.GetString("sap_version"),
+                                SapSupportPackage = reader.GetString("sap_support_package"),
+                                SapServerOperatingSystem = reader.GetString("sap_server_operating_system"),
+                                SapServerIp = reader.GetString("sap_server_ip"),
+                                DatabaseProduct = reader.GetString("database_product"),
+                                DatabaseVersion = reader.GetString("database_version"),
+                                DatabaseSupportPackage = reader.GetString("database_support_package"),
+                                DatabaseServerOperatingSystem = reader.GetString("database_server_operating_system"),
+                                DatabaseServerIp = reader.GetString("database_server_ip"),
+                                CustomerId = reader.GetInt32("customer_id")
                             };
 
-                            listProducts.Add(customer);
-                             */
-
+                            listProducts.Add(product);
                         }
                     }
                 }
