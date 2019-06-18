@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using SAPWS.Context;
@@ -24,6 +25,7 @@ namespace SAPWS.Controllers
         }
 
         [HttpGet]
+        [EnableCors("AllowOrigin")]
         public IActionResult GetListProductsByCustomer(int customerId)
         {
             try

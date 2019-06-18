@@ -30,6 +30,10 @@ namespace SAPWS
             // Add framework services.
             services.AddMvc();
             services.AddSingleton<IConfigurationRoot>(Configuration);
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:4200"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +43,7 @@ namespace SAPWS
             loggerFactory.AddDebug();
 
             app.UseMvc();
+            app.UseCors(options => options.WithOrigins("http://localhost:4200"));
         }
     }
 }
