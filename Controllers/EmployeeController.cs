@@ -15,33 +15,35 @@ namespace SAPWS.Controllers
 {
 
     [Route("api/[controller]/[action]")]
-    public class ProductController : Controller
+    public class EmployeeController : Controller
     {
         private List<Product> listProducts;
-        private ProductContext objContext;
+        private EmployeeContext objContext;
         private readonly IConfigurationRoot _configuration;
 
-        public ProductController(IConfigurationRoot configuration)
+        public EmployeeController(IConfigurationRoot configuration)
         {
             this._configuration = configuration;
             string mysqlConnStr = _configuration.GetConnectionString("DefaultConnection");
-            objContext = new ProductContext(mysqlConnStr);
+            objContext = new EmployeeContext(mysqlConnStr);
         }
 
         [HttpGet]
         [EnableCors("AllowOrigin")]
-        public IActionResult GetListProductsByCustomer(int customerId)
+        public IActionResult GetListEmployeesByCustomer(int customerId)
         {
             try
             {
                 //List<Product> listProducts = objContext.GetListProductsByCustomer(customerId);
-                CustomerDetails CustomerDetails = objContext.GetListProductsByCustomer(customerId);
-                return Ok(CustomerDetails);
+                CustomerDetails customerDetails = objContext.GetListEmployeesByCustomer(customerId);
+                return Ok(customerDetails);
             }
             catch
             {
                 return BadRequest("Error de ejecución");
             }
         }
+
+
     }
 }
